@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>@ViewBag.Title</title>
+ <title>@ViewBag.Title</title>
     <link href="~/content/site.css" rel="stylesheet" />
     <link href="~/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
 
@@ -16,7 +16,8 @@
                 <ul class="nav navbar-nav">
                     <li><a asp-controller="Home" asp-action="Index" class="navbar-brand">Pie Shop</a></li>
                     <li><a asp-controller="Feedback" asp-action="Index" class="navbar-brand">Feedback</a></li>
-                </ul>
+                  <partial name="_LoginPartial" />
+</ul>
             </div>
         </div>
     </nav>
@@ -27,5 +28,6 @@
         </div>
 
     </div>
+    @RenderSection("Scripts", required:false)
 </body>
 </html>
